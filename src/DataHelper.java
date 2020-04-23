@@ -5,14 +5,14 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class DataHelper {
-    private String PATH = "./uploads/quizzes/";
+    private static String PATH = "./uploads/quizzes/";
 
     // https://stackoverflow.com/a/5328933/5181428
-    private String generateId(){
+    private static String generateId(){
         return  Long.toString((long) (Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L));
     }
 
-    private boolean checkForId(String id){
+    private static boolean checkForId(String id){
         File file = new File(PATH + id + ".json");
 
         if(file.exists() && file.isFile()){
@@ -22,15 +22,15 @@ public class DataHelper {
         }
     }
 
-    public ArrayList<Quiz> getQuizzes(){
+    public static ArrayList<Quiz> getQuizzes(){
         return null;
     }
 
-    public Quiz getQuiz(String id){
+    public static Quiz getQuiz(String id){
         return null;
     }
 
-    public void importQuiz(){
+    public static void importQuiz(){
         String id = generateId();
 
         if(!checkForId(id)){
@@ -38,9 +38,9 @@ public class DataHelper {
         }
     }
 
-    public void saveHighscore(String name, int score, int id){ }
+    public static void saveHighscore(String name, int score, int id){ }
 
-    public ArrayList<Highscore> getHighscores(){
+    public static ArrayList<Highscore> getHighscores(){
         return null;
     }
 }
