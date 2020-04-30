@@ -19,31 +19,15 @@ public class Quiz {
         return _id;
     }
 
-    public void setId(int id) {
-        this._id = id;
-    }
-
     public String getName() {
         return _name;
-    }
-
-    public void setName(String name) {
-        this._name = name;
     }
 
     public int getDifficulty() {
         return _difficulty;
     }
 
-    public void setDifficulty(int difficulty) {
-        this._difficulty = difficulty;
-    }
-
     public ArrayList<Question> getQuestions() {
         return _questions;
-    }
-
-    public void setQuestions(ArrayList<Question> questions) {
-        this._questions = questions;
     }
 }

@@ -17,23 +17,11 @@ public class Question {
         return _question;
     }
 
-    public void setQuestion(String question) {
-        this._question = question;
-    }
-
     public String getCorrect() {
         return _correct;
     }
 
-    public void setCorrect(String correct) {
-        this._correct = correct;
-    }
-
     public ArrayList<String> getIncorrect() {
         return _incorrect;
-    }
-
-    public void setIncorrect(ArrayList<String> incorrect) {
-        this._incorrect = incorrect;
     }
 }

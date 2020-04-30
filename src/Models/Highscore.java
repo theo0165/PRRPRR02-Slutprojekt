@@ -15,23 +15,11 @@ public class Highscore {
         return _id;
     }
 
-    public void setId(int id) {
-        this._id = id;
-    }
-
     public String getName() {
         return _name;
     }
 
-    public void setName(String name) {
-        this._name = name;
-    }
-
     public int get_score() {
         return _score;
-    }
-
-    public void setScore(int score) {
-        this._score = score;
     }
 }

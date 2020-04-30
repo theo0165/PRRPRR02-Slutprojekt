@@ -1,7 +1,11 @@
 import Models.Highscore;
+import Models.Question;
 import Models.Quiz;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 
 public class DataHelper {
@@ -13,12 +17,17 @@ public class DataHelper {
     }
 
     private static boolean checkForId(String id){
-        File file = new File(PATH + id + ".json");
+        try {
+            File file = new File(PATH + id + ".json");
 
-        if(file.exists() && file.isFile()){
-            return true;
-        }else {
-            return false;
+            if (file.exists() && file.isFile()) {
+                return true;
+            } else {
+                return false;
+            }
+        }catch (Exception e){
+            System.out.println("Folder /uploads/quizzes does not exist!");
+            throw e;
         }
     }
 
@@ -27,14 +36,73 @@ public class DataHelper {
     }
 
     public static Quiz getQuiz(String id){
+        if(checkForId(id)){
+            try {
+                FileReader file = new FileReader(PATH + id + ".json");
+                JSONParser parser = new JSONParser();
+
+                try {
+                    Object obj = parser.parse(file);
+                    JSONObject json = (JSONObject) obj;
+
+                    ArrayList<Question> questions = new ArrayList<>();
+
+                    Quiz quiz = new Quiz(
+                            json.get("id"),
+                            json.get("name"),
+                            json.get("difficulty"),
+                            questions
+                    )
+                }catch (ParseException e){
+
+                } catch (IOException e) {
+
+                }
+
+            }catch (FileNotFoundException e){
+                return null;
+            }
+        }else{
+            return null;
+        }
+
         return null;
     }
 
-    public static void importQuiz(){
+    public static void importQuiz(String file){
         String id = generateId();
+        boolean idGood = false;
+        try {
+            FileReader toImport = new FileReader(file);
 
-        if(!checkForId(id)){
+            //Check file extension for .json
+            if(file.lastIndexOf(".") != -1 && file.lastIndexOf(".") != 0 && file.substring(file.lastIndexOf(".") + 1) == "json"){
+                // VALIDATE JSON
+                if(true){
+                    //JSON VALID
+                    while(!idGood) {
+                        File newFile = new File(PATH + id + ".json");
+                        try {
+                            if (!checkForId(id)) {
+                                idGood = true;
 
+                                if(newFile.createNewFile()){
+                                    FileWriter writer = new FileWriter(PATH + id + ".json");
+                                    writer.write(toImport.read());
+                                    writer.close();
+                                    toImport.close();
+                                }
+                            }else{
+                                id = generateId();
+                            }
+                        } catch (Exception e) {
+                            // SEND ERROR TO USER
+                        }
+                    }
+                }
+            }
+        }catch (FileNotFoundException e){
+            //SEND ERROR TO USER
         }
     }
 

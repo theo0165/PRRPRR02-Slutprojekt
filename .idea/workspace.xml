@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1bce97-810b-49a6-acf9-4f1915bfd59c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Highscore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Quiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design.ai" beforeDir="false" afterPath="$PROJECT_DIR$/Design.ai" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PRRPRR02-Slutprojekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PRRPRR02-Slutprojekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Highscore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Highscore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Quiz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Programming/School/TE17C-PRRPRR02" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,21 +72,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587640341425" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="461" y="164" key="SettingsEditor" timestamp="1588152726486">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588152726486" />
+    <state x="685" y="481" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588152708050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="481" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588152708050" />
   </component>
 </project>
