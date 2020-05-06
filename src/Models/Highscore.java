@@ -19,7 +19,7 @@ public class Highscore {
         return _name;
     }
 
-    public int get_score() {
+    public int getScore() {
         return _score;
     }
 }

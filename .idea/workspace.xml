@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1bce97-810b-49a6-acf9-4f1915bfd59c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/uploads/quizzes/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/highscore.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/HomeLayout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/DataHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/DataHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/Models/Highscore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/Models/Highscore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Highscore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Highscore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -45,7 +52,13 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProjects\PRRPRR02-Slutprojekt\src\uploads\quizzes" />
+      <recent name="D:\JavaProjects\PRRPRR02-Slutprojekt\src\uploads" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DataHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataHelper" />
       <module name="PRRPRR02-Slutprojekt" />
@@ -53,8 +66,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PRRPRR02-Slutprojekt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DataHelper" />
       </list>
     </recent_temporary>
@@ -77,26 +98,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Getter_Template/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587639980362" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1587640341425">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1588756957511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587640341425" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1588247243295">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588756957511" />
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom" timestamp="1588757178296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588247243295" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1588247243294">
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588757178296" />
+    <state width="1877" height="177" key="GridCell.Tab.0.center" timestamp="1588757178296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588247243294" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1588247243294">
+    <state width="1877" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588757178296" />
+    <state width="1877" height="177" key="GridCell.Tab.0.left" timestamp="1588757178295">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588247243294" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1588247243295">
+    <state width="1877" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588757178295" />
+    <state width="1877" height="177" key="GridCell.Tab.0.right" timestamp="1588757178296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588247243295" />
+    <state width="1877" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588757178296" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1588152726486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

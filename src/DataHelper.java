@@ -7,16 +7,13 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class DataHelper {
-    public static void main(String[] args) {
-        getQuizzes();
-    }
-
-    private static String PATH = Paths.get("src/uploads/quizzes").toAbsolutePath().toString() + "/";
+    private static final String PATH = Paths.get("src").toAbsolutePath().toString() + "/";
+    private static final String QUIZ_PATH = PATH + "uploads/quizzes/";
+    private static final String HIGHSCORE_PATH = PATH + "data/";
 
     // https://stackoverflow.com/a/5328933/5181428
     private static String generateId(){
@@ -25,7 +22,7 @@ public class DataHelper {
 
     private static boolean checkForId(String id){
         try {
-            File file = new File(PATH + id + ".json");
+            File file = new File(QUIZ_PATH + id + ".json");
 
             if (file.exists() && file.isFile()) {
                 return true;
@@ -42,7 +39,7 @@ public class DataHelper {
         ArrayList<Quiz> quizzes = new ArrayList<>();
 
         try{
-            File folder = new File(PATH);
+            File folder = new File(QUIZ_PATH);
             File[] fileList = folder.listFiles();
 
             for(int i=0; i<fileList.length; i++){
@@ -63,7 +60,7 @@ public class DataHelper {
             System.out.println("DEBUG: ID OK");
             //COMPARE TO SCHEMA
             try {
-                FileReader file = new FileReader(PATH + id + ".json");
+                FileReader file = new FileReader(QUIZ_PATH + id + ".json");
                 JSONParser parser = new JSONParser();
                 System.out.println("DEBUG: FILE INITIALIZED");
 
@@ -92,14 +89,12 @@ public class DataHelper {
 
                     //System.out.println(((JSONObject)((JSONArray)json.get("questions")).get(0)).get("q"));
 
-                    Quiz quiz = new Quiz(
+                    return new Quiz(
                             Integer.parseInt(json.get("id").toString()),
                             json.get("name").toString(),
                             Integer.parseInt(json.get("difficulty").toString()),
                             questions
                     );
-
-                    return quiz;
                 }catch (ParseException e){
                     System.out.println("DEBUG: COULD NOT PARSE");
                 } catch (IOException e) {
@@ -109,7 +104,7 @@ public class DataHelper {
 
             }catch (FileNotFoundException e){
                 System.out.println("DEBUG: FILE NOT FOUND");
-                System.out.println("DEBUG: " + PATH + id + ".json");
+                System.out.println("DEBUG: " + QUIZ_PATH + id + ".json");
                 return null;
             }
         }else{
@@ -132,14 +127,15 @@ public class DataHelper {
                 if(true){
                     //JSON VALID
                     while(!idGood) {
-                        File newFile = new File(PATH + id + ".json");
+                        File newFile = new File(QUIZ_PATH + id + ".json");
                         try {
                             if (!checkForId(id)) {
                                 idGood = true;
 
                                 if(newFile.createNewFile()){
-                                    FileWriter writer = new FileWriter(PATH + id + ".json");
+                                    FileWriter writer = new FileWriter(QUIZ_PATH + id + ".json");
                                     writer.write(toImport.read());
+                                    writer.flush();
                                     writer.close();
                                     toImport.close();
                                 }
@@ -157,9 +153,69 @@ public class DataHelper {
         }
     }
 
-    public static void saveHighscore(String name, int score, int id){ }
+    @SuppressWarnings("unchecked")
+    public static void saveHighscore(String name, int score, int id){
+        JSONParser parser = new JSONParser();
+
+        try{
+            File highscoreFile = new File(HIGHSCORE_PATH + "highscore.json");
+            if(!highscoreFile.exists()){
+                System.out.println("DEBUG: FILE DOES NOT EXISTS");
+                highscoreFile.createNewFile();
+            }
+
+            FileReader reader = new FileReader(highscoreFile);
+            Object content = parser.parse(reader);
+            JSONObject jsonContent = (JSONObject) content;
+            JSONArray highscoreArray = (JSONArray) jsonContent.get("highscores");
+
+            JSONObject newData = new JSONObject();
+            newData.put("name", name);
+            newData.put("score", score);
+            newData.put("id", id);
+
+            highscoreArray.add(newData);
+            System.out.println(jsonContent);
+
+            reader.close();
+
+            FileWriter writer = new FileWriter(HIGHSCORE_PATH + "highscore.json");
+            writer.write(jsonContent.toString());
+            writer.flush();
+            writer.close();
+        }catch (Exception e){
+
+        }
+    }
 
     public static ArrayList<Highscore> getHighscores(){
-        return null;
+        ArrayList<Highscore> highscoreList = new ArrayList<>();
+
+        try{
+            JSONParser parser = new JSONParser();
+            File highscoreFile = new File(HIGHSCORE_PATH + "highscore.json");
+            if(!highscoreFile.exists()){
+                System.out.println("DEBUG: FILE DOES NOT EXISTS");
+                highscoreFile.createNewFile();
+            }
+
+            FileReader reader = new FileReader(HIGHSCORE_PATH + "highscore.json");
+            Object content = parser.parse(reader);
+            JSONObject jsonContent = (JSONObject) content;
+            JSONArray highscores = (JSONArray) jsonContent.get("highscores");
+
+            for(int i=0; i<highscores.size(); i++){
+                JSONObject highscore = (JSONObject) highscores.get(i);
+                highscoreList.add(new Highscore(
+                        Integer.parseInt(highscore.get("id").toString()),
+                        highscore.get("name").toString(),
+                        Integer.parseInt(highscore.get("score").toString())
+                ));
+            }
+        }catch(Exception e){
+            return null;
+        }
+
+        return highscoreList;
     }
 }
