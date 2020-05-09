@@ -5,7 +5,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import java.net.URL?>
 <StackPane fx:id="body" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+    <stylesheets>
+        <URL value="@../resources/style/HomeStyle.css" />
+    </stylesheets>
+
     <HBox fx:id="titleContainer" alignment="TOP_CENTER" StackPane.alignment="TOP_CENTER">
         <Text fx:id="title" text="QUIZ GAME" />
     </HBox>

@@ -8,12 +8,12 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("layout/HomeLayout.fxml"));
-        Scene scene = new Scene(root, 800, 600);
-        scene.getStylesheets().add("resources/style/HomeStyle.css");
+        SceneManager.primaryStage = primaryStage;
+        SceneManager.root = FXMLLoader.load(getClass().getResource("layout/HomeLayout.fxml"));
+        SceneManager.scene = new Scene(SceneManager.root, 800, 600);
         primaryStage.setTitle("Quiz Game");
-        primaryStage.getIcons().add(new Image("file:resources/images/favicon-32x32.png"));
-        primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image("file:/resources/images/favicon-32x32.png"));
+        primaryStage.setScene(SceneManager.scene);
         primaryStage.show();
     }
 

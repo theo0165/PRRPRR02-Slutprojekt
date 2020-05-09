@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1bce97-810b-49a6-acf9-4f1915bfd59c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/style/HomeStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SceneManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/GameLayout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/style/GameStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/layout/HomeLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/layout/HomeLayout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/HomeLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/HomeLayout.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +49,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -106,22 +106,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588756957511" />
-    <state width="1877" height="177" key="GridCell.Tab.0.bottom" timestamp="1588853011146">
+    <state x="707" y="374" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589034763022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588853011146" />
-    <state width="1877" height="177" key="GridCell.Tab.0.center" timestamp="1588853011146">
+    <state x="707" y="374" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034763022" />
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom" timestamp="1589034979199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588853011146" />
-    <state width="1877" height="177" key="GridCell.Tab.0.left" timestamp="1588853011145">
+    <state width="1877" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034979199" />
+    <state width="1877" height="177" key="GridCell.Tab.0.center" timestamp="1589034979199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588853011145" />
-    <state width="1877" height="177" key="GridCell.Tab.0.right" timestamp="1588853011146">
+    <state width="1877" height="177" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034979199" />
+    <state width="1877" height="177" key="GridCell.Tab.0.left" timestamp="1589034979199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588853011146" />
+    <state width="1877" height="177" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034979199" />
+    <state width="1877" height="177" key="GridCell.Tab.0.right" timestamp="1589034979199">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="177" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034979199" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588765376144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
