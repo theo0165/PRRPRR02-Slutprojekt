@@ -1,3 +1,5 @@
+package helpers;
+
 import Models.Highscore;
 import Models.Question;
 import Models.Quiz;
@@ -52,6 +54,7 @@ public class DataHelper {
             return null;
         }
 
+        System.out.println(quizzes.size());
         return quizzes;
     }
 
@@ -71,13 +74,16 @@ public class DataHelper {
 
                     ArrayList<Question> questions = new ArrayList<>();
 
-                    for(int i=0; i < ((JSONArray)json.get("questions")).size(); i++){
+                    System.out.println("DEBUG: " + ((JSONArray)json.get("questions")).size());
+                    int size = ((JSONArray)json.get("questions")).size();
+                    for(int i=0; i < size; i++){
+                        System.out.println("LOOP");
                         JSONArray array = ((JSONArray)json.get("questions"));
                         JSONObject object = (JSONObject) array.get(i);
                         ArrayList<String> incorrect = new ArrayList<>();
 
-                        for(int i1=0; i<((JSONArray)object.get("incorrect")).size(); i++){
-                            incorrect.add(((JSONArray)object.get("incorrect")).get(i1).toString());
+                        for(int j=0; j<((JSONArray)object.get("incorrect")).size(); j++){
+                            incorrect.add(((JSONArray)object.get("incorrect")).get(j).toString());
                         }
 
                         questions.add(new Question(

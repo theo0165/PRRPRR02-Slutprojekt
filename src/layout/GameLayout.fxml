@@ -3,11 +3,10 @@
 <?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import Models.Quiz?>
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <StackPane fx:id="body" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
     <stylesheets>
         <URL value="@../resources/style/GameStyle.css" />
@@ -42,8 +41,16 @@
                     <PropertyValueFactory property="difficulty" />
                 </cellValueFactory>
             </TableColumn>
+            <TableColumn text="">
+                <cellValueFactory>
+                    <PropertyValueFactory property="selectBtn" />
+                </cellValueFactory>
+            </TableColumn>
         </columns>
         <items>
         </items>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
     </TableView>
 </StackPane>

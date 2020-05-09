@@ -1,0 +1,33 @@
+@font-face {
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face{
+    src: url('../fonts/PassionOne-Regular.ttf');
+}
+
+#body{
+    -fx-background-color: #282A31;
+}
+
+.answerBtn{
+    -fx-background-color: #C03A2A;
+    -fx-fill: white;
+    -fx-text-fill: white;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 15px;
+}
+
+#question{
+    -fx-fill: white;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 30px;
+}
+
+#counter{
+    -fx-font-family: "Passion One";
+    -fx-fill: white;
+    -fx-font-size: 20px;
+}

@@ -3,6 +3,7 @@
 <?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -25,9 +26,31 @@
 
     <TableView fx:id="quizList" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="673.0" StackPane.alignment="CENTER">
         <columns>
-            <TableColumn text="Name" />
-            <TableColumn text="Questions" />
-            <TableColumn text="Difficulty" />
+            <TableColumn text="Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Questions">
+                <cellValueFactory>
+                    <PropertyValueFactory property="questions" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Difficulty">
+                <cellValueFactory>
+                    <PropertyValueFactory property="difficulty" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="">
+                <cellValueFactory>
+                    <PropertyValueFactory property="selectBtn" />
+                </cellValueFactory>
+            </TableColumn>
         </columns>
+        <items>
+        </items>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
     </TableView>
 </StackPane>
