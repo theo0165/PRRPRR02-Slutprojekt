@@ -1,0 +1,53 @@
+@font-face {
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face{
+    src: url('../fonts/PassionOne-Regular.ttf');
+}
+
+#body{
+    -fx-background-color: #282A31;
+}
+
+#title{
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 60px;
+    -fx-fill: white;
+    -fx-padding: 20px;
+    -fx-border-insets: 20px;
+    -fx-background-insets: 20px;
+}
+
+.bigBtn{
+    -fx-font-family: 'Passion One';
+    -fx-font-weight: bold;
+    -fx-font-size: 55px;
+    -fx-text-fill: white;
+    -fx-background-color: #C03A2A;
+    -fx-cursor: hand;
+    -fx-letter-spacing: 20px;
+}
+
+#playBtn{
+    -fx-padding: 22px 105px;
+}
+
+#settingsBtn{
+    -fx-padding: 19px 36px;
+}
+
+.smallBtn{
+    -fx-font-family: 'Passion One';
+    -fx-fill: white;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+
+#scoreboardBtn{
+}
+
+#exitBtn{
+
+}

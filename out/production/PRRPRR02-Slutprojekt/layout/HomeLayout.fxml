@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.HomeController"
-            prefHeight="800.0" prefWidth="600.0">
+<StackPane fx:id="body" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+    <HBox fx:id="titleContainer" alignment="TOP_CENTER" StackPane.alignment="TOP_CENTER">
+        <Text fx:id="title" text="QUIZ GAME" />
+    </HBox>
 
-</AnchorPane>
+    <VBox fx:id="buttonContainer" alignment="CENTER" StackPane.alignment="CENTER">
+        <Button fx:id="playBtn" styleClass="bigBtn" text="P L A Y" onMouseClicked="#handlePlay">
+             <VBox.margin>
+                <Insets bottom="20.0" top="75.0" />
+             </VBox.margin>
+        </Button>
+        <Button fx:id="settingsBtn" styleClass="bigBtn" text="S E T T I N G S" onMouseClicked="#handleSettings" />
+        <HBox fx:id="smallButtonContainer" alignment="CENTER">
+            <Text fx:id="scoreboardBtn" styleClass="smallBtn" text="SCOREBOARD" onMouseClicked="#handleScoreboard">
+                <HBox.margin>
+                    <Insets right="212.0" />
+                </HBox.margin>
+            </Text>
+            <Text fx:id="exitBtn" styleClass="smallBtn" text="EXIT" onMouseClicked="#handleExit" />
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+    </VBox>
+</StackPane>
