@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.GameController"
-            prefHeight="800.0" prefWidth="600.0"
-            fx:id="body">
+<StackPane fx:id="body" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GameController">
+    <stylesheets>
+        <URL value="@../resources/style/GameStyle.css" />
+    </stylesheets>
 
-</AnchorPane>
+    <Text fx:id="backBtn" onMouseClicked="#handleBack" text="B A C K" StackPane.alignment="TOP_LEFT">
+      <StackPane.margin>
+         <Insets left="10.0" top="10.0" />
+      </StackPane.margin>
+    </Text>
+
+    <Text fx:id="title" text="Select quiz" StackPane.alignment="TOP_CENTER">
+      <StackPane.margin>
+         <Insets top="40.0" />
+      </StackPane.margin>
+    </Text>
+
+    <TableView fx:id="quizList" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="673.0" StackPane.alignment="CENTER">
+        <columns>
+            <TableColumn text="Name" />
+            <TableColumn text="Questions" />
+            <TableColumn text="Difficulty" />
+        </columns>
+    </TableView>
+</StackPane>
