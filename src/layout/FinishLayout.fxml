@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="body" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@../resources/style/FinishStyle.css" />
+    </stylesheets>
+    <VBox alignment="TOP_CENTER" StackPane.alignment="TOP_CENTER">
+        <Text fx:id="congrats" text="Congratulations!" StackPane.alignment="TOP_CENTER">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin></Text>
+        <Text fx:id="scoreMessage" text="You scored 5/5" StackPane.alignment="TOP_CENTER" />
+      <StackPane.margin>
+         <Insets top="40.0" />
+      </StackPane.margin>
+    </VBox>
+    <VBox alignment="CENTER" fillWidth="false" StackPane.alignment="CENTER">
+        <Text fx:id="label" text="Name:">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin></Text>
+        <TextField fx:id="nameInput" promptText="Name" />
+        <Button fx:id="saveBtn" styleClass="redButton" text="Save score" onMouseClicked="#handleSaveScore">
+         <VBox.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </VBox.margin></Button>
+        <Button fx:id="exitBtn" styleClass="redButton" text="Exit" onMouseClicked="#handleExit" />
+    </VBox>
+</StackPane>

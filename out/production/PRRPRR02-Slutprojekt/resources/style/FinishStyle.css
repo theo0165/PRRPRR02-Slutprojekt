@@ -1,0 +1,39 @@
+@font-face {
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face{
+    src: url('../fonts/PassionOne-Regular.ttf');
+}
+
+#body{
+    -fx-background-color: #282A31;
+}
+
+#congrats{
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 30px;
+    -fx-fill: white;
+}
+
+#scoreMessage{
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 20px;
+    -fx-fill: white;
+}
+
+.redButton{
+    -fx-font-family: 'Passion One';
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: #C03A2A;
+    -fx-cursor: hand;
+    -fx-letter-spacing: 20px;
+}
+
+#label{
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 15px;
+    -fx-fill: white;
+}

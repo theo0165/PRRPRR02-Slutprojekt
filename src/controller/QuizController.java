@@ -4,10 +4,15 @@ import Models.Question;
 import Models.Quiz;
 import helpers.DataHelper;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -76,7 +81,21 @@ public class QuizController {
     }
 
     private void finishQuiz(){
-        
+        Stage stage = (Stage) question.getScene().getWindow();
+        FinishController finishController = new FinishController(id, score);
+        FXMLLoader loader = null;
+        loader = new FXMLLoader(getClass().getResource("../layout/FinishLayout.fxml"));
+
+        loader.setController(finishController);
+
+        Scene scene = null;
+        try {
+            scene = new Scene(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void handleAnswerOne(MouseEvent event){
