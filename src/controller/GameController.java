@@ -40,7 +40,6 @@ public class GameController {
             String name = quiz.getName();
             int questions = quiz.getQuestions().size();
             int difficulty = quiz.getDifficulty();
-            Button selectBtn = new Button("Select");
 
             System.out.println(quiz.getQuestions().size());
             for(Question q : quiz.getQuestions()){

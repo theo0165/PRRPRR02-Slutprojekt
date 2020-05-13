@@ -39,22 +39,28 @@ public class DataHelper {
 
     public static ArrayList<Quiz> getQuizzes(){
         ArrayList<Quiz> quizzes = new ArrayList<>();
+        System.out.println("Getting quizzes");
 
         try{
             File folder = new File(QUIZ_PATH);
             File[] fileList = folder.listFiles();
+            System.out.println(fileList.toString());
 
             for(int i=0; i<fileList.length; i++){
+                System.out.println("GET LOOP");
                 if(fileList[i].isFile() && fileList[i].getName() != "schema.json"){
+                    System.out.println("Added to list");
                     String fileName = fileList[i].getName().substring(0, fileList[i].getName().length() - 5);
-                    quizzes.add(getQuiz(fileName));
+                    System.out.println(fileName);
+                    Quiz quiz = getQuiz(fileName);
+                    quizzes.add(quiz);
                 }
             }
         }catch (Exception e){
             return null;
         }
 
-        System.out.println(quizzes.size());
+        System.out.println(quizzes);
         return quizzes;
     }
 
@@ -127,35 +133,51 @@ public class DataHelper {
         try {
             FileReader toImport = new FileReader(file);
 
+            System.out.println("File opened");
+
             //Check file extension for .json
-            if(file.lastIndexOf(".") != -1 && file.lastIndexOf(".") != 0 && file.substring(file.lastIndexOf(".") + 1) == "json"){
+            if(file.lastIndexOf(".") != -1 && file.lastIndexOf(".") != 0 && file.substring(file.lastIndexOf(".") + 1).equals("json")){
                 // VALIDATE JSON
                 if(true){
                     //JSON VALID
+                    System.out.println("JSON valid");
                     while(!idGood) {
                         File newFile = new File(QUIZ_PATH + id + ".json");
                         try {
                             if (!checkForId(id)) {
+                                System.out.println("ID GOOD");
                                 idGood = true;
 
                                 if(newFile.createNewFile()){
                                     FileWriter writer = new FileWriter(QUIZ_PATH + id + ".json");
-                                    writer.write(toImport.read());
+                                    JSONParser parser = new JSONParser();
+
+                                    Object object = parser.parse(toImport);
+                                    JSONObject json = (JSONObject) object;
+                                    json.put("id", id);
+                                    System.out.println(json.toString());
+
+                                    writer.write(json.toString());
                                     writer.flush();
                                     writer.close();
                                     toImport.close();
+                                    System.out.println("File written");
                                 }
                             }else{
                                 id = generateId();
                             }
                         } catch (Exception e) {
                             // SEND ERROR TO USER
+                            System.out.println("Error");
                         }
                     }
                 }
+            }else{
+                System.out.println("Invalid file");
             }
         }catch (FileNotFoundException e){
             //SEND ERROR TO USER
+            System.out.println("Error 2");
         }
     }
 
@@ -223,5 +245,21 @@ public class DataHelper {
         }
 
         return highscoreList;
+    }
+
+    public static void changeLang(String lang){
+        try{
+           File file = new File(HIGHSCORE_PATH + "language.txt");
+
+           if(!file.exists()){
+               file.createNewFile();
+           }
+
+           FileWriter writer = new FileWriter(HIGHSCORE_PATH + "language.txt");
+           writer.write(lang);
+           writer.close();
+        }catch (Exception e){
+
+        }
     }
 }
