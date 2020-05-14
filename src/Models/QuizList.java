@@ -15,6 +15,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Model for single quiz in list (TableView)
+ */
 //https://medium.com/@keeptoo/adding-data-to-javafx-tableview-stepwise-df582acbae4f
 public class QuizList {
     private SimpleStringProperty name;
@@ -30,7 +33,9 @@ public class QuizList {
         this.id = new SimpleDoubleProperty(_id);
         this.selectBtn = new Button(LanguageHelper.getCurrentLanguage().getString("selectButton"));
 
+        // Set on click event for button in list
         this.selectBtn.setOnAction(event -> {
+            // Load single quiz
             Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();
             QuizController quizController = new QuizController(this.id.get());
             FXMLLoader loader = null;

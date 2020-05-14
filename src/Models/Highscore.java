@@ -1,5 +1,8 @@
 package Models;
 
+/**
+ * Model for Highscore
+ */
 public class Highscore {
     private int _id;
     private String _name;

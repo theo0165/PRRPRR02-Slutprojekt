@@ -3,6 +3,9 @@ package Models;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * Model for highscore in Scoreboard list (TableView)
+ */
 public class HighscoreList {
     private SimpleStringProperty name;
     private SimpleStringProperty quizName;

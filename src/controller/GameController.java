@@ -20,6 +20,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/***
+ * Controller for quiz select screen
+ */
 public class GameController {
     @FXML
     Text backBtn;
@@ -31,8 +34,11 @@ public class GameController {
         insertQuizList();
     }
 
+    /***
+     * Insert data to list of quizzes
+     */
     public void insertQuizList(){
-        ArrayList<Quiz> quizzes = DataHelper.getQuizzes();
+        ArrayList<Quiz> quizzes = DataHelper.getQuizzes(); // Get list of quizzes from DataHelper
 
         for(int i=0; i<quizzes.size(); i++){
             Quiz quiz = quizzes.get(i);
@@ -47,11 +53,17 @@ public class GameController {
                 System.out.println(q.getQuestion());
             }
 
-            quizList.getItems().add(new QuizList(name, questions, difficulty, id));
+            quizList.getItems().add(new QuizList(name, questions, difficulty, id)); // Separate class for quiz items in list
         }
     }
 
+    /***
+     * Go back to home screen when back button is pressed
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void handleBack(MouseEvent mouseEvent) throws IOException {
+        //Go back to home screen
         Stage stage = (Stage) backBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         Scene scene = new Scene(root);

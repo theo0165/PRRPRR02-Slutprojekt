@@ -2,6 +2,9 @@ package Models;
 
 import java.util.ArrayList;
 
+/**
+ * Model for single quiz
+ */
 public class Quiz {
     private double _id;
     private String _name;

@@ -17,6 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/**
+ * Controller for scoreboard screen
+ */
 public class ScoreboardController {
     @FXML
     TableView scoreboardList;
@@ -28,6 +31,9 @@ public class ScoreboardController {
         insertScoreboardList();
     }
 
+    /**
+     * Insert data into scoreboard list (TableView)
+     */
     private void insertScoreboardList(){
         ArrayList<Highscore> highscores = DataHelper.getHighscores();
         highscores.sort(Comparator.comparing(Highscore::getScore).reversed()); // Sort list after score, highest first
@@ -36,13 +42,17 @@ public class ScoreboardController {
             Highscore highscore = highscores.get(i);
 
             String name = highscore.getName();
-            String quizName = DataHelper.getQuiz(String.valueOf(highscore.getId())).getName();
+            String quizName = DataHelper.getQuiz(String.valueOf(highscore.getId())).getName(); // Get quiz from data helper, then get the name of that quiz
             int score = highscore.getScore();
 
-            scoreboardList.getItems().add(new HighscoreList(name, quizName, score));
+            scoreboardList.getItems().add(new HighscoreList(name, quizName, score)); // Add data with the HighscoreList model
         }
     }
 
+    /**
+     * Go back to home screen
+     * @param event
+     */
     public void handleBack(MouseEvent event) {
         Stage stage = (Stage) backBtn.getScene().getWindow();
         Parent root = null;

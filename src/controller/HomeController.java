@@ -17,6 +17,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/***
+ * Controller for home screen
+ */
 public class HomeController {
     @FXML
     StackPane root;
@@ -41,11 +44,19 @@ public class HomeController {
         titleContainer.setPadding(new Insets(130, 0, 0, 0));
     }
 
+    /***
+     * Exit program
+     * @param mouseEvent
+     */
     public void handleExit(MouseEvent mouseEvent) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
     }
 
+    /***
+     * Switch screen to scoreboard
+     * @param mouseEvent
+     */
     public void handleScoreboard(MouseEvent mouseEvent) {
         Stage stage = (Stage) settingsBtn.getScene().getWindow();
         Parent root = null;
@@ -59,6 +70,10 @@ public class HomeController {
         }
     }
 
+    /***
+     * Switch screen to settings
+     * @param mouseEvent
+     */
     public void handleSettings(MouseEvent mouseEvent) {
         Stage stage = (Stage) settingsBtn.getScene().getWindow();
         Parent root = null;
@@ -72,6 +87,11 @@ public class HomeController {
         stage.show();
     }
 
+    /**
+     * Switch screen to quiz select screen
+     * @param mouseEvent
+     * @throws IOException
+     */
     public void handlePlay(MouseEvent mouseEvent) throws IOException {
         Stage stage = (Stage) playBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("../layout/GameLayout.fxml"), LanguageHelper.getCurrentLanguage());

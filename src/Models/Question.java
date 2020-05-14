@@ -2,6 +2,9 @@ package Models;
 
 import java.util.ArrayList;
 
+/**
+ * Model for single question
+ */
 public class Question {
     private String _question; // The question to be shown
     private String _correct; // The correct anwser

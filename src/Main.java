@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**
+ * Quiz program with language and import features
+ */
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {

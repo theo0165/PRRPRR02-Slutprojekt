@@ -17,6 +17,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
+/***
+ * Controller for finish screen. You get here after completing a quiz
+ */
 public class FinishController {
     double id;
     int score;
@@ -37,11 +40,16 @@ public class FinishController {
     @FXML
     TextField nameInput;
 
+    /***
+     * Constructor get's called from quiz controller
+     * @param _id ID of the quiz just completed
+     * @param _score The score from the quiz
+     */
     public FinishController(double _id, int _score){
         this.id = _id;
         this.score = _score;
 
-        DecimalFormat formatter = new DecimalFormat("0.##");
+        DecimalFormat formatter = new DecimalFormat("0.##"); // Remove decimals from double
         this.quiz = DataHelper.getQuiz(formatter.format(id).toString());
     }
 
@@ -50,6 +58,7 @@ public class FinishController {
     }
 
     public void handleExit(MouseEvent event){
+        // Switch to home screen
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -63,6 +72,7 @@ public class FinishController {
     }
 
     public void handleSaveScore(MouseEvent event){
+        // Save highscore and switch to home screen
         DataHelper.saveHighscore(nameInput.getText(), score, id);
 
         Stage stage = (Stage) saveBtn.getScene().getWindow();
