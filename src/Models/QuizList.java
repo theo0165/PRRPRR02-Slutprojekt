@@ -1,6 +1,7 @@
 package Models;
 
 import controller.QuizController;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
@@ -18,14 +19,14 @@ public class QuizList {
     private SimpleStringProperty name;
     private SimpleIntegerProperty questions;
     private SimpleIntegerProperty difficulty;
-    private SimpleIntegerProperty id;
+    private SimpleDoubleProperty id;
     private Button selectBtn;
 
-    public QuizList(String _name, Integer _questions, Integer _difficulty, Integer _id){
+    public QuizList(String _name, Integer _questions, Integer _difficulty, Double _id){
         this.name = new SimpleStringProperty(_name);
         this.questions = new SimpleIntegerProperty(_questions);
         this.difficulty = new SimpleIntegerProperty(_difficulty);
-        this.id = new SimpleIntegerProperty(_id);
+        this.id = new SimpleDoubleProperty(_id);
         this.selectBtn = new Button("Select");
 
         this.selectBtn.setOnAction(event -> {
@@ -61,7 +62,7 @@ public class QuizList {
         return difficulty.get();
     }
 
-    public int getId() {
+    public double getId() {
         return id.get();
     }
 

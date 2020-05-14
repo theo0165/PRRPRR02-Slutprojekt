@@ -50,12 +50,12 @@ public class HomeController {
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("../layout/ScoreboardLayout.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public void handleSettings(MouseEvent mouseEvent) {

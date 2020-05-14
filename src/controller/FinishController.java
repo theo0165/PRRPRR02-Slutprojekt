@@ -14,9 +14,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 public class FinishController {
-    int id;
+    double id;
     int score;
     Quiz quiz;
 
@@ -32,10 +33,12 @@ public class FinishController {
     @FXML
     TextField nameInput;
 
-    public FinishController(int _id, int _score){
+    public FinishController(double _id, int _score){
         this.id = _id;
         this.score = _score;
-        this.quiz = DataHelper.getQuiz(String.valueOf(_id));
+
+        DecimalFormat formatter = new DecimalFormat("0.##");
+        this.quiz = DataHelper.getQuiz(formatter.format(id).toString());
     }
 
     public void initialize(){

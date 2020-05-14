@@ -36,7 +36,7 @@ public class GameController {
         for(int i=0; i<quizzes.size(); i++){
             Quiz quiz = quizzes.get(i);
 
-            int id = quiz.getId();
+            double id = quiz.getId();
             String name = quiz.getName();
             int questions = quiz.getQuestions().size();
             int difficulty = quiz.getDifficulty();

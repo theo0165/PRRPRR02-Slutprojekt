@@ -10,6 +10,7 @@ import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class DataHelper {
@@ -19,7 +20,7 @@ public class DataHelper {
 
     // https://stackoverflow.com/a/5328933/5181428
     private static String generateId(){
-        return  Long.toString((long) (Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L));
+        return  Long.toString((long) (Math.floor(Math.random() * 9_000_000L) + 1_000_000L));
     }
 
     private static boolean checkForId(String id){
@@ -57,7 +58,7 @@ public class DataHelper {
                 }
             }
         }catch (Exception e){
-            return null;
+            System.out.println(e);
         }
 
         System.out.println(quizzes);
@@ -101,27 +102,26 @@ public class DataHelper {
 
                     //System.out.println(((JSONObject)((JSONArray)json.get("questions")).get(0)).get("q"));
 
+                    System.out.println("RETURNING");
                     return new Quiz(
-                            Integer.parseInt(json.get("id").toString()),
+                            Double.parseDouble(json.get("id").toString()),
                             json.get("name").toString(),
                             Integer.parseInt(json.get("difficulty").toString()),
                             questions
                     );
                 }catch (ParseException e){
-                    System.out.println("DEBUG: COULD NOT PARSE");
+                    System.out.println(e);
                 } catch (IOException e) {
-                    System.out.println("DEBUG: IOException");
+                    System.out.println(e);
 
                 }
 
             }catch (FileNotFoundException e){
                 System.out.println("DEBUG: FILE NOT FOUND");
                 System.out.println("DEBUG: " + QUIZ_PATH + id + ".json");
-                return null;
             }
         }else{
             System.out.println("DEBUG: ID NOT OK");
-            return null;
         }
 
         return null;
@@ -182,7 +182,7 @@ public class DataHelper {
     }
 
     @SuppressWarnings("unchecked")
-    public static void saveHighscore(String name, int score, int id){
+    public static void saveHighscore(String name, int score, double id){
         JSONParser parser = new JSONParser();
 
         try{
@@ -198,8 +198,9 @@ public class DataHelper {
             JSONArray highscoreArray = (JSONArray) jsonContent.get("highscores");
 
             JSONObject newData = new JSONObject();
+            DecimalFormat formatter = new DecimalFormat("0.##");
             newData.put("name", name);
-            newData.put("score", score);
+            newData.put("score", Integer.valueOf(formatter.format(score)));
             newData.put("id", id);
 
             highscoreArray.add(newData);
@@ -212,7 +213,8 @@ public class DataHelper {
             writer.flush();
             writer.close();
         }catch (Exception e){
-
+            System.out.println("LINE 216");
+            System.out.println(e);
         }
     }
 
@@ -241,7 +243,7 @@ public class DataHelper {
                 ));
             }
         }catch(Exception e){
-            return null;
+            System.out.println(e);
         }
 
         return highscoreList;

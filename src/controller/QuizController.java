@@ -13,11 +13,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class QuizController {
-    int id;
+    double id;
     Quiz quiz;
 
     int index = 0;
@@ -43,12 +44,14 @@ public class QuizController {
     @FXML
     Text counter;
 
-    public QuizController(int _id){
+    public QuizController(double _id){
         this.id = _id;
     }
 
     public void initialize(){
-        quiz = DataHelper.getQuiz(String.valueOf(id));
+        DecimalFormat formatter = new DecimalFormat("0.##");
+        String formated = formatter.format(id).toString();
+        quiz = DataHelper.getQuiz(formated);
         nextQuestion();
     }
 
