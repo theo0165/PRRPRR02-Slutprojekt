@@ -1,3 +1,4 @@
+import helpers.LanguageHelper;
 import helpers.SceneManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         SceneManager.primaryStage = primaryStage;
-        SceneManager.root = FXMLLoader.load(getClass().getResource("layout/HomeLayout.fxml"));
+        SceneManager.root = FXMLLoader.load(getClass().getResource("layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         SceneManager.scene = new Scene(SceneManager.root, 800, 600);
         primaryStage.setTitle("Quiz Game");
         primaryStage.getIcons().add(new Image("file:/resources/images/favicon-32x32.png"));

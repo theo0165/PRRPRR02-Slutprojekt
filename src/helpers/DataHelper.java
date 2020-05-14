@@ -9,9 +9,12 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataHelper {
     private static final String PATH = Paths.get("src").toAbsolutePath().toString() + "/";
@@ -250,6 +253,7 @@ public class DataHelper {
     }
 
     public static void changeLang(String lang){
+        System.out.println(lang);
         try{
            File file = new File(HIGHSCORE_PATH + "language.txt");
 
@@ -261,7 +265,7 @@ public class DataHelper {
            writer.write(lang);
            writer.close();
         }catch (Exception e){
-
+            System.out.println(e);
         }
     }
 
@@ -280,6 +284,29 @@ public class DataHelper {
             writer.close();
         }catch (Exception e){
 
+        }
+    }
+
+    public static String getCurrentLang() {
+        try{
+            File file = new File(HIGHSCORE_PATH + "language.txt");
+
+            if(!file.exists() || !file.isFile()){
+                file.createNewFile();
+
+                FileWriter writer = new FileWriter(HIGHSCORE_PATH + "language.txt");
+                writer.write("en");
+                writer.close();
+
+                return "en";
+            }
+
+            List<String> lines = Files.readAllLines(Paths.get(HIGHSCORE_PATH + "language.txt"), StandardCharsets.UTF_8);
+
+            return lines.get(0);
+        }catch (Exception e){
+            System.out.println(e);
+            return null;
         }
     }
 }

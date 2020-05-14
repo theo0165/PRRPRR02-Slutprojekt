@@ -8,6 +8,7 @@ Settings:
  */
 
 import helpers.DataHelper;
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,18 +42,19 @@ public class SettingsController {
     public void initialize(){}
 
     public void handleSave(MouseEvent event) {
+        System.out.println(newLang);
         if(!newLang.equals("")){
-            if(newLang.equals("swe")){
-                DataHelper.changeLang("swe");
-            } else if (newLang.equals("eng")) {
-                DataHelper.changeLang("eng");
+            if(newLang.equals("sv")){
+                DataHelper.changeLang("sv");
+            } else if (newLang.equals("en")) {
+                DataHelper.changeLang("en");
             }
         }
 
         Stage stage = (Stage) saveBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,7 +78,7 @@ public class SettingsController {
         Stage stage = (Stage) saveBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -86,10 +88,10 @@ public class SettingsController {
     }
 
     public void handleLanguageSwe(MouseEvent event) {
-        newLang = "swe";
+        newLang = "sv";
     }
 
     public void handleLanguageEng(MouseEvent event) {
-        newLang = "eng";
+        newLang = "en";
     }
 }

@@ -3,6 +3,7 @@ package controller;
 import Models.Question;
 import Models.Quiz;
 import helpers.DataHelper;
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -87,7 +88,7 @@ public class QuizController {
         Stage stage = (Stage) question.getScene().getWindow();
         FinishController finishController = new FinishController(id, score);
         FXMLLoader loader = null;
-        loader = new FXMLLoader(getClass().getResource("../layout/FinishLayout.fxml"));
+        loader = new FXMLLoader(getClass().getResource("../layout/FinishLayout.fxml"), LanguageHelper.getCurrentLanguage());
 
         loader.setController(finishController);
 

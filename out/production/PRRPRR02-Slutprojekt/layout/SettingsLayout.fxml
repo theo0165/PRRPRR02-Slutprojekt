@@ -12,20 +12,20 @@
     </stylesheets>
     <VBox>
         <HBox alignment="CENTER">
-            <Text fx:id="title" text="Settings" textAlignment="CENTER" />
+            <Text fx:id="title" text="%settingsTitle" textAlignment="CENTER" />
         </HBox>
         <HBox fx:id="languageContainer" alignment="CENTER">
             <VBox>
-                <Text styleClass="label" text="Language" textAlignment="CENTER" wrappingWidth="787.849609375">
+                <Text styleClass="label" text="%languageLabel" textAlignment="CENTER" wrappingWidth="787.849609375">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin></Text>
                 <HBox alignment="CENTER">
-                    <Button fx:id="sweSelectBtn" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#handleLanguageSwe" styleClass="smallBtn" text="Swedish">
+                    <Button fx:id="sweSelectBtn" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#handleLanguageSwe" styleClass="smallBtn" text="%langSwe">
                   <HBox.margin>
                      <Insets right="10.0" />
                   </HBox.margin></Button>
-                    <Button fx:id="engSelectBtn" onMouseClicked="#handleLanguageEng" styleClass="smallBtn" text="English" />
+                    <Button fx:id="engSelectBtn" onMouseClicked="#handleLanguageEng" styleClass="smallBtn" text="%langEng" />
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
@@ -36,19 +36,19 @@
          </VBox.margin>
         </HBox>
         <HBox fx:id="uploadContainer" alignment="CENTER">
-            <Button fx:id="uploadBtn" onMouseClicked="#handleUpload" styleClass="smallBtn" text="Upload quiz" />
+            <Button fx:id="uploadBtn" onMouseClicked="#handleUpload" styleClass="smallBtn" text="%uploadLabel" />
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>
         </HBox>
         <HBox fx:id="resetContainer" alignment="CENTER">
-            <Button fx:id="resetBtn" onMouseClicked="#handleReset" styleClass="smallBtn" text="Reset program" />
+            <Button fx:id="resetBtn" onMouseClicked="#handleReset" styleClass="smallBtn" text="%resetLabel" />
          <VBox.margin>
             <Insets bottom="30.0" />
          </VBox.margin>
         </HBox>
         <HBox fx:id="saveContainer" alignment="CENTER">
-            <Button fx:id="saveBtn" onMouseClicked="#handleSave" styleClass="smallBtn" text="Save Settings" />
+            <Button fx:id="saveBtn" onMouseClicked="#handleSave" styleClass="smallBtn" text="%saveLabel" />
         </HBox>
       <StackPane.margin>
          <Insets top="50.0" />

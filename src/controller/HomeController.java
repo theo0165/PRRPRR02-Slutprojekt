@@ -1,5 +1,6 @@
 package controller;
 
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -49,7 +50,7 @@ public class HomeController {
         Stage stage = (Stage) settingsBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/ScoreboardLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/ScoreboardLayout.fxml"), LanguageHelper.getCurrentLanguage());
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -62,7 +63,7 @@ public class HomeController {
         Stage stage = (Stage) settingsBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/SettingsLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/SettingsLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,7 +74,7 @@ public class HomeController {
 
     public void handlePlay(MouseEvent mouseEvent) throws IOException {
         Stage stage = (Stage) playBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("../layout/GameLayout.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../layout/GameLayout.fxml"), LanguageHelper.getCurrentLanguage());
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

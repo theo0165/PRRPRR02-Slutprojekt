@@ -1,6 +1,7 @@
 package Models;
 
 import controller.QuizController;
+import helpers.LanguageHelper;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -27,7 +28,7 @@ public class QuizList {
         this.questions = new SimpleIntegerProperty(_questions);
         this.difficulty = new SimpleIntegerProperty(_difficulty);
         this.id = new SimpleDoubleProperty(_id);
-        this.selectBtn = new Button("Select");
+        this.selectBtn = new Button(LanguageHelper.getCurrentLanguage().getString("selectButton"));
 
         this.selectBtn.setOnAction(event -> {
             Stage stage = (Stage) ((Button)event.getSource()).getScene().getWindow();

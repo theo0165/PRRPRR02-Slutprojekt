@@ -12,28 +12,28 @@
         <URL value="@../resources/style/ScoreboardStyle.css" />
     </stylesheets>
 
-    <Text fx:id="backBtn" text="Back" StackPane.alignment="TOP_LEFT" onMouseClicked="#handleBack">
+    <Text fx:id="backBtn" text="%back" StackPane.alignment="TOP_LEFT" onMouseClicked="#handleBack">
       <StackPane.margin>
          <Insets left="10.0" top="10.0" />
       </StackPane.margin></Text>
-    <Text fx:id="title" text="Scoreboard" StackPane.alignment="TOP_CENTER">
+    <Text fx:id="title" text="%scoreboardTitle" StackPane.alignment="TOP_CENTER">
       <StackPane.margin>
          <Insets top="40.0" />
       </StackPane.margin></Text>
 
     <TableView fx:id="scoreboardList" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="673.0" StackPane.alignment="CENTER">
         <columns>
-            <TableColumn text="Name">
+            <TableColumn text="%scoreboardLabelName">
                 <cellValueFactory>
                     <PropertyValueFactory property="name" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="Quiz">
+            <TableColumn text="%scoreboardLabelQuiz">
                 <cellValueFactory>
                     <PropertyValueFactory property="quizName" />
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn text="Score">
+            <TableColumn text="%socreboardLabelScore">
                 <cellValueFactory>
                     <PropertyValueFactory property="score" />
                 </cellValueFactory>

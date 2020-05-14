@@ -5,6 +5,7 @@ import Models.Quiz;
 
 import Models.QuizList;
 import helpers.DataHelper;
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -52,7 +53,7 @@ public class GameController {
 
     public void handleBack(MouseEvent mouseEvent) throws IOException {
         Stage stage = (Stage) backBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

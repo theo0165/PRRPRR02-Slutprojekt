@@ -11,25 +11,31 @@
         <URL value="@../resources/style/FinishStyle.css" />
     </stylesheets>
     <VBox alignment="TOP_CENTER" StackPane.alignment="TOP_CENTER">
-        <Text fx:id="congrats" text="Congratulations!" StackPane.alignment="TOP_CENTER">
+        <Text fx:id="congrats" text="%message" StackPane.alignment="TOP_CENTER">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin></Text>
-        <Text fx:id="scoreMessage" text="You scored 5/5" StackPane.alignment="TOP_CENTER" />
+        <HBox alignment="TOP_CENTER">
+            <Text fx:id="scoreMessage" text="%scoreMessage">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin></Text>
+            <Text fx:id="scoreValue" />
+        </HBox>
       <StackPane.margin>
          <Insets top="40.0" />
       </StackPane.margin>
     </VBox>
     <VBox alignment="CENTER" fillWidth="false" StackPane.alignment="CENTER">
-        <Text fx:id="label" text="Name:">
+        <Text fx:id="label" text="%finishNameLabel">
          <VBox.margin>
             <Insets bottom="5.0" />
          </VBox.margin></Text>
         <TextField fx:id="nameInput" promptText="Name" />
-        <Button fx:id="saveBtn" styleClass="redButton" text="Save score" onMouseClicked="#handleSaveScore">
+        <Button fx:id="saveBtn" onMouseClicked="#handleSaveScore" styleClass="redButton" text="%saveButton">
          <VBox.margin>
             <Insets bottom="20.0" top="10.0" />
          </VBox.margin></Button>
-        <Button fx:id="exitBtn" styleClass="redButton" text="Exit" onMouseClicked="#handleExit" />
+        <Button fx:id="exitBtn" onMouseClicked="#handleExit" styleClass="redButton" text="%exit" />
     </VBox>
 </StackPane>

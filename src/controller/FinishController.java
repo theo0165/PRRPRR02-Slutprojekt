@@ -2,6 +2,7 @@ package controller;
 
 import Models.Quiz;
 import helpers.DataHelper;
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +26,9 @@ public class FinishController {
     Text scoreMessage;
 
     @FXML
+    Text scoreValue;
+
+    @FXML
     Button exitBtn;
 
     @FXML
@@ -42,14 +46,14 @@ public class FinishController {
     }
 
     public void initialize(){
-        scoreMessage.setText("You scored " + score + "/" + quiz.getQuestions().size());
+        scoreValue.setText(score + "/" + quiz.getQuestions().size());
     }
 
     public void handleExit(MouseEvent event){
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -64,7 +68,7 @@ public class FinishController {
         Stage stage = (Stage) saveBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }

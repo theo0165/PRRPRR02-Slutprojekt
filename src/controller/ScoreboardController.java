@@ -3,6 +3,7 @@ package controller;
 import Models.Highscore;
 import Models.HighscoreList;
 import helpers.DataHelper;
+import helpers.LanguageHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -46,7 +47,7 @@ public class ScoreboardController {
         Stage stage = (Stage) backBtn.getScene().getWindow();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layout/HomeLayout.fxml"), LanguageHelper.getCurrentLanguage());
         } catch (IOException e) {
             e.printStackTrace();
         }

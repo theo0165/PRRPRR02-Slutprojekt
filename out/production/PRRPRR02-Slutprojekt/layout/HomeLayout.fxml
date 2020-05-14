@@ -16,19 +16,19 @@
     </HBox>
 
     <VBox fx:id="buttonContainer" alignment="CENTER" StackPane.alignment="CENTER">
-        <Button fx:id="playBtn" styleClass="bigBtn" text="P L A Y" onMouseClicked="#handlePlay">
+        <Button fx:id="playBtn" styleClass="bigBtn" text="%play" onMouseClicked="#handlePlay">
              <VBox.margin>
                 <Insets bottom="20.0" top="75.0" />
              </VBox.margin>
         </Button>
-        <Button fx:id="settingsBtn" styleClass="bigBtn" text="S E T T I N G S" onMouseClicked="#handleSettings" />
+        <Button fx:id="settingsBtn" styleClass="bigBtn" text="%settings" onMouseClicked="#handleSettings" />
         <HBox fx:id="smallButtonContainer" alignment="CENTER">
-            <Text fx:id="scoreboardBtn" styleClass="smallBtn" text="SCOREBOARD" onMouseClicked="#handleScoreboard">
+            <Text fx:id="scoreboardBtn" styleClass="smallBtn" text="%scoreboard" onMouseClicked="#handleScoreboard">
                 <HBox.margin>
                     <Insets right="212.0" />
                 </HBox.margin>
             </Text>
-            <Text fx:id="exitBtn" styleClass="smallBtn" text="EXIT" onMouseClicked="#handleExit" />
+            <Text fx:id="exitBtn" styleClass="smallBtn" text="%exit" onMouseClicked="#handleExit" />
             <VBox.margin>
                 <Insets top="10.0" />
             </VBox.margin>

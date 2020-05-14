@@ -2,20 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1bce97-810b-49a6-acf9-4f1915bfd59c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/helpers/LanguageHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/lang.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/lang_sv.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/layout/ScoreboardLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/layout/ScoreboardLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/uploads/quizzes/3185013545.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/QuizList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/QuizList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/FinishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FinishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/QuizController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ScoreboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ScoreboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/highscore.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/highscore.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/language.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/language.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/FinishLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/FinishLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/GameLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/GameLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/HomeLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/HomeLayout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/ScoreboardLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/ScoreboardLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploads/quizzes/3185013545.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/SettingsLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/SettingsLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/style/FinishStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/style/FinishStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,22 +118,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="374" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034763022" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589456935462">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1589462630918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589456935462" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589456935462">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589462630918" />
+    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1589462630917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589456935462" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589456935462">
+    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589462630917" />
+    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1589462630917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589456935462" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589456935462">
+    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589462630917" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1589462630918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589456935462" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589462630918" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589456935462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -151,16 +158,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="685" y="481" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588152708050" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/helpers/DataHelper.java</url>
-          <line>221</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589461022568">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589461022568" />
   </component>
 </project>
