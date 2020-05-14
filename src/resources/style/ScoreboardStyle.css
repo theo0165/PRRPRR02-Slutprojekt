@@ -1,0 +1,60 @@
+@font-face {
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face{
+    src: url('../fonts/PassionOne-Regular.ttf');
+}
+
+#body{
+    -fx-background-color: #282A31;
+}
+
+#title{
+    -fx-font-family: "Press Start 2P";
+    -fx-fill: white;
+    -fx-font-size: 40px;
+}
+
+#backBtn{
+    -fx-font-family: "Passion One";
+    -fx-font-size: 20px;
+    -fx-fill: white;
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: #282A31;
+}
+
+.table-view .table-column{
+    -fx-background-color: #282A31;
+    -fx-border-width: 1px 0px 1px 0px;
+    -fx-border-color: white white white white;
+    -fx-alignment: CENTER
+}
+
+.table-view .column-header{
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px;
+    -fx-font-family: "Passion One";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header .label{
+    -fx-font-family: "Press Start 2P";
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-padding: 10px;
+}
+
+.table-view{
+    -fx-focus-color: white;
+}

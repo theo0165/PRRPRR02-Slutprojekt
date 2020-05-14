@@ -36,9 +36,19 @@ public class SettingsController {
     @FXML
     Button saveBtn;
 
+    String newLang = "";
+
     public void initialize(){}
 
     public void handleSave(MouseEvent event) {
+        if(!newLang.equals("")){
+            if(newLang.equals("swe")){
+                DataHelper.changeLang("swe");
+            } else if (newLang.equals("eng")) {
+                DataHelper.changeLang("eng");
+            }
+        }
+
         Stage stage = (Stage) saveBtn.getScene().getWindow();
         Parent root = null;
         try {
@@ -52,6 +62,7 @@ public class SettingsController {
     }
 
     public void handleReset(MouseEvent event) {
+        DataHelper.clearHighscore();
     }
 
     public void handleUpload(MouseEvent event) {
@@ -75,8 +86,10 @@ public class SettingsController {
     }
 
     public void handleLanguageSwe(MouseEvent event) {
+        newLang = "swe";
     }
 
     public void handleLanguageEng(MouseEvent event) {
+        newLang = "eng";
     }
 }

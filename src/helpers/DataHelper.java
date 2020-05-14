@@ -262,4 +262,22 @@ public class DataHelper {
 
         }
     }
+
+    public static void clearHighscore(){
+        try{
+            File file = new File(HIGHSCORE_PATH + "highscore.json");
+
+            if(file.exists() && file.isFile()){
+                file.delete();
+            }
+
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter(HIGHSCORE_PATH + "highscore.json");
+            writer.write("{\"highscores\":[]");
+            writer.close();
+        }catch (Exception e){
+
+        }
+    }
 }

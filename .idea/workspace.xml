@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1bce97-810b-49a6-acf9-4f1915bfd59c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/language.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/HighscoreList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ScoreboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/ScoreboardLayout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/style/ScoreboardStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/data/highscore.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/data/highscore.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/controller/SettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/data/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/helpers/DataHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRRPRR02-Slutprojekt/helpers/DataHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/language.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/language.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/DataHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/SettingsLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/SettingsLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/style/SettingsStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/style/SettingsStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +32,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
   </component>
   <component name="ProjectId" id="1aZWFesLCqghplbkYSKtJsEc3yh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,30 +103,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="683" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588760611668" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1589042446132">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1589453313196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589042446132" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589453313196" />
     <state x="707" y="374" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1589034763022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="374" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589034763022" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1589362229853">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1589453794164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589362229853" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1589362229853">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589453794164" />
+    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1589453794164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589362229853" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1589362229852">
+    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589453794164" />
+    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1589453794164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589362229852" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1589362229853">
+    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589453794164" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1589453794164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589362229853" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589453794164" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589049384141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

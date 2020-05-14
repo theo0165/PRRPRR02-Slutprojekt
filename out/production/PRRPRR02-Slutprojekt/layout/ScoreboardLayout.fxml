@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.ScoreboardController"
+           prefHeight="600.0" prefWidth="800.0"
+           fx:id="body">
+    <stylesheets>
+        <URL value="@../resources/style/ScoreboardStyle.css" />
+    </stylesheets>
+
+    <Text fx:id="backBtn" text="Back" />
+    <Text fx:id="title" text="Scoreboard" />
+    <TableView fx:id="scoreboardList" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="673.0" StackPane.alignment="CENTER">
+        <columns>
+            <TableColumn text="Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Quiz">
+                <cellValueFactory>
+                    <PropertyValueFactory property="quizName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Score">
+                <cellValueFactory>
+                    <PropertyValueFactory property="score" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items></items>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+</StackPane>

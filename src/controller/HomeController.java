@@ -46,6 +46,16 @@ public class HomeController {
     }
 
     public void handleScoreboard(MouseEvent mouseEvent) {
+        Stage stage = (Stage) settingsBtn.getScene().getWindow();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../layout/ScoreboardLayout.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void handleSettings(MouseEvent mouseEvent) {
